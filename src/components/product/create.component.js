@@ -4,11 +4,11 @@ import Button from 'react-bootstrap/Button'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import axios from 'axios'
-import Swal from 'sweetalert2';
-import { useNavigate } from 'react-router-dom'
+// import Swal from 'sweetalert2';
+// import { useNavigate } from 'react-router-dom'
 
 export default function CreateProduct() {
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
 
   const [serviceName, setServiceName] = useState("")
   const [productName, setProductName] = useState("")
@@ -17,7 +17,7 @@ export default function CreateProduct() {
   const [versionId, setVersionId] = useState("")
   const [serviceId, setServiceId] = useState("")
   const [image, setImage] = useState()
-  const [validationError,setValidationError] = useState({})
+  // const [validationError,setValidationError] = useState({})
 
   const changeHandler = (event) => {
 		setImage(event.target.files[0]);
@@ -82,29 +82,29 @@ export default function CreateProduct() {
               <h4 className="card-title">Create Product</h4>
               <hr />
               <div className="form-wrapper">
-                {
-                  Object.keys(validationError).length > 0 && (
-                    <div className="row">
-                      <div className="col-12">
-                        <div className="alert alert-danger">
-                          <ul className="mb-0">
-                            {
-                              Object.entries(validationError).map(([key, value])=>(
-                                <li key={key}>{value}</li>   
-                              ))
-                            }
-                          </ul>
-                        </div>
-                      </div>
-                    </div>
-                  )
-                }
+                {/*{*/}
+                {/*  Object.keys(validationError).length > 0 && (*/}
+                {/*    <div className="row">*/}
+                {/*      <div className="col-12">*/}
+                {/*        <div className="alert alert-danger">*/}
+                {/*          <ul className="mb-0">*/}
+                {/*            {*/}
+                {/*              Object.entries(validationError).map(([key, value])=>(*/}
+                {/*                <li key={key}>{value}</li>   */}
+                {/*              ))*/}
+                {/*            }*/}
+                {/*          </ul>*/}
+                {/*        </div>*/}
+                {/*      </div>*/}
+                {/*    </div>*/}
+                {/*  )*/}
+                {/*}*/}
                 <Form onSubmit={createProduct}>
                   <Row> 
                       <Col>
                         <Form.Group controlId="Name">
                             <Form.Label>Service name</Form.Label>
-                            <Form.Control type="text" value={serviceName} onChange={(event)=>{
+                            <Form.Control type="text" onChange={(event)=>{
                               setServiceName(event.target.value)
                             }}/>
                         </Form.Group>
@@ -114,7 +114,7 @@ export default function CreateProduct() {
                       <Col>
                         <Form.Group controlId="Name">
                             <Form.Label>Product name</Form.Label>
-                            <Form.Control type="text" value={productName} onChange={(event)=>{
+                            <Form.Control type="text" onChange={(event)=>{
                               setProductName(event.target.value)
                             }}/>
                         </Form.Group>
@@ -124,7 +124,7 @@ export default function CreateProduct() {
                       <Col>
                         <Form.Group controlId="Description">
                             <Form.Label>Description</Form.Label>
-                            <Form.Control as="textarea" rows={3} value={description} onChange={(event)=>{
+                            <Form.Control as="textarea" rows={3} onChange={(event)=>{
                               setDescription(event.target.value)
                             }}/>
                         </Form.Group>
@@ -134,7 +134,7 @@ export default function CreateProduct() {
                       <Col>
                         <Form.Group controlId="Name">
                             <Form.Label>Price</Form.Label>
-                            <Form.Control type="text" value={price} onChange={(event)=>{
+                            <Form.Control type="text" onChange={(event)=>{
                               setPrice(event.target.value)
                             }}/>
                         </Form.Group>
@@ -144,7 +144,7 @@ export default function CreateProduct() {
                       <Col>
                         <Form.Group controlId="Name">
                             <Form.Label>Version id</Form.Label>
-                            <Form.Control type="text" value={versionId} onChange={(event)=>{
+                            <Form.Control type="text" onChange={(event)=>{
                               setVersionId(event.target.value)
                             }}/>
                         </Form.Group>
@@ -154,7 +154,7 @@ export default function CreateProduct() {
                       <Col>
                         <Form.Group controlId="Name">
                             <Form.Label>Service id</Form.Label>
-                            <Form.Control type="text" value={serviceId} onChange={(event)=>{
+                            <Form.Control type="text" onChange={(event)=>{
                               setServiceId(event.target.value)
                             }}/>
                         </Form.Group>
