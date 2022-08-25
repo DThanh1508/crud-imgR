@@ -1,0 +1,79 @@
+/* -------------------------------------header------------------------------------- */
+.header{
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    z-index: 1000;
+    background-color: rgb(255,86,34);
+}
+.navbar-brand, .navbar-collapse{
+    margin-left: 115px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.navbar-brand{
+    width: 350px;
+}
+
+.navbar-brand img{
+    width: 20%;
+}
+
+.nav-item{
+    padding-right: 30px;
+}
+
+.nav-link:hover{
+    transform: scale(1.1);
+}
+
+.nav-link{
+    color: white;
+    font-size: 120%;
+    font-weight: 600;
+    transition: all 0,5s;
+}
+
+.btn__signUp--style{
+    margin-right: 115px;
+    background-color: #ffef1d;
+}
+
+.sticky--on{
+    background-color: rgba(255, 255, 255, 0.9);
+    overflow: hidden;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 25px 50px 0px;
+    animation: sticky-header--on 1.5s;
+}
+
+.sticky--off{
+    background-color: rgba(255, 255, 255, 0);
+    overflow: hidden;
+    animation: sticky-header--off 1.5s;
+}
+
+@keyframes sticky-header--on { 
+    from {
+        box-shadow: rgba(0, 0, 0, 0) 0px 25px 50px 0px;
+        background-color: rgba(255, 255, 255, 0);
+    }
+  
+    to {
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 25px 50px 0px;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+  }
+
+@keyframes sticky-header--off { 
+    from {
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 25px 50px 0px;
+        background-color: rgba(255, 255, 255, 0.9);
+    }
+
+    to {
+        box-shadow: rgba(0, 0, 0, 0) 0px 25px 50px 0px;
+        background-color: rgba(255, 255, 255, 0);
+    }
+}

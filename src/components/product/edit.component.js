@@ -6,6 +6,7 @@ import Col from 'react-bootstrap/Col';
 import { useNavigate, useParams } from 'react-router-dom'
 import axios from 'axios';
 import Swal from 'sweetalert2';
+import Header from "../Header";
 
 export default function EditProduct() {
   const navigate = useNavigate();
@@ -67,12 +68,13 @@ export default function EditProduct() {
         service_id: service_id
       }
 
-    axios.put(`http://localhost:8000/api/products/${id}`, data).then(({data})=>{
+    axios.put(`http://localhost:8000/api/products/${id}`, data)
+    .then(({data})=>{
       Swal.fire({
         icon:"success",
         text:data.message
       })
-      navigate("/")
+      navigate("/products")
     }).catch(({response})=>{
       if(response.status===422){
         setValidationError(response.data.errors)
@@ -87,7 +89,10 @@ export default function EditProduct() {
 }
 
   return (
-    <div className="container">
+    <>
+      <Header></Header>
+      <section className="edit-product">
+      <div className="container">
       <div className="row justify-content-center">
         <div className="col-12 col-sm-12 col-md-6">
           <div className="card">
@@ -181,5 +186,7 @@ export default function EditProduct() {
         </div>
       </div>
     </div>
+      </section>
+    </>
   )
 }

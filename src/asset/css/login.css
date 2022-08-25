@@ -1,0 +1,40 @@
+.flex-center {
+    display: flex;
+    justify-content: center;
+}
+
+.login{
+    width: 400px;
+    padding: 100px;
+    background-color: rgb(234, 234, 234);
+    margin-top: 5%;
+}
+
+.login__title{
+    text-align: center;
+}
+
+.login__form{
+    width: 500px;
+}
+
+.login__form__label{
+    font-weight: 600;
+    display: block;
+    margin: 10px 0px;
+}
+
+.login__form__input{
+    padding: 10px 20px;
+    border: 1px solid rgb(143, 143, 143);
+    border-radius: 5px;
+}
+
+.login__btn{
+    background-color: #00FF84;
+    border: none;
+    padding: 10px 60px;
+    font-size: 120%;
+    font-weight: 600;
+    margin-top: 50px;
+}

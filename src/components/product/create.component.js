@@ -4,6 +4,8 @@ import Button from 'react-bootstrap/Button'
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import axios from 'axios'
+import Header from "../Header";
+import { useNavigate } from "react-router-dom";
 // import Swal from 'sweetalert2';
 // import { useNavigate } from 'react-router-dom'
 
@@ -17,6 +19,7 @@ export default function CreateProduct() {
   const [versionId, setVersionId] = useState("")
   const [serviceId, setServiceId] = useState("")
   const [image, setImage] = useState()
+  const navigate = useNavigate()
   // const [validationError,setValidationError] = useState({})
 
   const changeHandler = (event) => {
@@ -52,6 +55,7 @@ export default function CreateProduct() {
       .then((response)=>{
         console.log(response.data);
         alert('thành công');
+        return navigate("/products");
       });
     });
 
@@ -74,7 +78,10 @@ export default function CreateProduct() {
   }
 
   return (
-    <div className="container">
+    <>
+      <Header/>
+      <section className="create-product">
+      <div className="container">
       <div className="row justify-content-center">
         <div className="col-12 col-sm-12 col-md-6">
           <div className="card">
@@ -178,5 +185,7 @@ export default function CreateProduct() {
         </div>
       </div>
     </div>
+      </section>
+    </>
   )
 }
