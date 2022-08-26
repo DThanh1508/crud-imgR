@@ -83,29 +83,61 @@ export default function CreateProduct() {
       <section className="create-product">
       <div className="container">
       <div className="row justify-content-center">
-        <div className="col-12 col-sm-12 col-md-6">
+        <div className="col-6">
+        <div className="card">
+            <div className="card-body">
+              <h4 className="card-title card-title--red">Những lưu ý khi thêm sản phẩm theo tiêu chuẩn SEO</h4>
+              <hr />
+              <p>
+              <i class="fa-solid fa-circle-check"></i> Đặt Từ khóa tập trung cho nội dung này.
+              </p>
+              <p>
+              <i class="fa-solid fa-circle-check"></i> Thêm Từ khóa chính vào tiêu đề SEO.
+              </p><p>
+              <i class="fa-solid fa-circle-check"></i> Sử dụng từ khóa chính gần đầu tiêu đề SEO.
+              </p><p>
+              <i class="fa-solid fa-circle-check"></i> Tiêu đề 0 ký tự (ngắn). Cố gắng có được 70 ký tự.
+              </p><p>
+              <i class="fa-solid fa-circle-check"></i> Thêm Từ khóa tập trung vào Mô tả meta SEO của bạn.
+              </p><p>
+              <i class="fa-solid fa-circle-check"></i> Mô tả meta SEO có 0 ký tự (ngắn). Cố gắng thành 160 ký tự.
+              </p><p>
+              <i class="fa-solid fa-circle-check"></i> Sử dụng từ khóa chính trong URL.
+              </p><p>
+              <i class="fa-solid fa-circle-check"></i> Url có 14 ký tự (ngắn).
+              </p><p>
+              <i class="fa-solid fa-circle-check"></i> Sử dụng từ khóa chính ở đầu nội dung của bạn.
+              </p><p>
+              <i class="fa-solid fa-circle-check"></i> Thêm liên kết nội bộ vào nội dung của bạn.
+              </p><p>
+              <i class="fa-solid fa-circle-check"></i> Sử dụng từ khóa chính trong (các) tiêu đề phụ như H2, H3, H4, v.v..
+              </p>
+              <p>
+              <i class="fa-solid fa-circle-check"></i> Thêm từ khóa vào thuộc tính alt của hình ảnh.
+              </p>
+              <p>
+              <i class="fa-solid fa-circle-check"></i> Mật độ từ khóa là 0. Nhắm đến khoảng 1% Mật độ từ khóa.
+              </p>
+              <p>
+              <i class="fa-solid fa-circle-check"></i> Thêm các đoạn văn ngắn và súc tích để dễ đọc và UX hơn.
+              </p>
+              <p>
+              <i class="fa-solid fa-circle-check"></i> Thêm một vài hình ảnh để làm cho nội dung của bạn hấp dẫn.
+              </p>
+              <p>
+              <i class="fa-solid fa-circle-check"></i> Sử dụng từ khóa chính trong nội dung.
+              </p>
+              <div className="form-wrapper">
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="col-6 col-sm-6 col-md-6">
           <div className="card">
             <div className="card-body">
               <h4 className="card-title">Create Product</h4>
               <hr />
               <div className="form-wrapper">
-                {/*{*/}
-                {/*  Object.keys(validationError).length > 0 && (*/}
-                {/*    <div className="row">*/}
-                {/*      <div className="col-12">*/}
-                {/*        <div className="alert alert-danger">*/}
-                {/*          <ul className="mb-0">*/}
-                {/*            {*/}
-                {/*              Object.entries(validationError).map(([key, value])=>(*/}
-                {/*                <li key={key}>{value}</li>   */}
-                {/*              ))*/}
-                {/*            }*/}
-                {/*          </ul>*/}
-                {/*        </div>*/}
-                {/*      </div>*/}
-                {/*    </div>*/}
-                {/*  )*/}
-                {/*}*/}
                 <Form onSubmit={createProduct}>
                   <Row> 
                       <Col>

@@ -16,3 +16,11 @@
     position: relative;
     left: -200px;
 }
+
+.card-title--red{
+    color: red;
+}
+
+.fa-circle-check{
+    color: rgb(51, 232, 63);
+}
